@@ -97,7 +97,7 @@ body {
 .body {
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   background: var(--light-cream, #fef2e8);
   height: 100vh;
@@ -105,6 +105,8 @@ body {
 }
 
 .container1 {
+  margin-left: 240px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,6 +135,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .body {
+    display: flex;
+    justify-content: center;
+  }
   .container1 {
     display: flex;
     flex-direction: column;
