@@ -4,15 +4,86 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-style: italic;
-  font-size: large;
-
-  background-color: grey;
   width: 100%;
-  height: 90px;
+  height: 96px;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--white, #fff);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 32px;
+}
+
+.grain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 8px;
+  width: 48px;
+  height: 48px;
+  gap: 8px;
+  flex-shrink: 0;
+
+  background-repeat: no-repeat;
+  background-image: url('Images/Grain.svg');
+}
+
+.coffeLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 176px;
+  height: 44px;
+  fill: var(--deep-blue, #023a6b);
+
+  background-image: url('Images/Coffe.svg');
+}
+
+.cartLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-right: 32px;
+}
+
+.cart {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+
+  background-image: url('Images/ShoppingCart.png');
+}
+
+.cartText {
+  display: flex;
+  flex-direction: column;
+  width: 84px;
+  margin-right: 32px;
+
+  color: var(--deep-blue, #023a6b);
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.body {
+  background: var(--light-cream, #fef2e8);
+  height: 804px;
+  width: 100%;
 }
