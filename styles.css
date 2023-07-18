@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Eczar';
+  src: url('./fonts/Eczar-SemiBold.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +49,7 @@ body {
   justify-content: center;
   align-items: center;
 
+  margin-right: 80px;
   width: 176px;
   height: 44px;
   fill: var(--deep-blue, #023a6b);
@@ -82,8 +88,72 @@ body {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+  .cartText {
+    display: none;
+  }
+}
+
 .body {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
   background: var(--light-cream, #fef2e8);
-  height: 804px;
+  height: 100vh;
   width: 100%;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 792px;
+  height: 174px;
+
+  margin-top: 64px;
+}
+
+.sloganTxt {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--deep-blue, #023a6b);
+  font-family: Eczar;
+}
+
+.pleasures {
+  color: var(--orange, #f73);
+  font-family: Eczar;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+@media screen and (max-width: 768px) {
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 0px;
+  }
+  .sloganTxt {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
+  .pleasures {
+    color: var(--orange, #f73);
+    font-family: Eczar;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
 }
