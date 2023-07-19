@@ -181,7 +181,7 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  margin-right: 48px;
+  margin-right: 4.8vw;
 }
 
 .cup1 {
@@ -202,7 +202,7 @@ body {
   background-repeat: no-repeat;
   z-index: 1;
 
-  background-image: url('/Images/Stamp.png');
+  background-image: url('Images/Stamp.png');
   animation: rotation 23s ease-in-out infinite;
 }
 
@@ -373,7 +373,7 @@ body {
 
 .infoBtn {
   margin-left: 16px;
-  background-image: url('/Images/Info.svg');
+  background-image: url('Images/Info.svg');
   width: 20px;
   height: 20px;
   object-fit: contain;
