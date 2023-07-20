@@ -20,7 +20,7 @@
       </div>
 
       <div class="cartLogo">
-        <div class="cart"></div>
+        <div class="cart"><label class="cart-count"></label></div>
         <div class="cartText">Shopping Cart</div>
       </div>
     </header>
@@ -56,10 +56,10 @@
 
         
           <div class="chooseSize">
-            <input class="sizeBtn" type="radio" name="size"></input>
-            <div class="size">250 ml</div>
-            <input class="sizeBtn" type="radio" name="size"></input>
-            <div class="size">500 ml</div>
+            <input class="sizeBtn" type="radio" name="size"/>
+          <label class="size">250 ml</label>
+            <input class="sizeBtn" type="radio" name="size"/>
+          <label class="size">500 ml</label>
           </div>
 
           
@@ -90,10 +90,10 @@
           </div>
 
           <div class="chooseSize">
-            <input class="sizeBtn" type="radio" name="size2"></input>
-            <div class="size">250 ml</div>
-            <input class="sizeBtn" type="radio" name="size2"></input>
-            <div class="size">500 ml</div>
+            <input class="sizeBtn" type="radio" name="size2"/>
+            <label class="size">250 ml</label>
+            <input class="sizeBtn" type="radio" name="size2"/>
+            <label class="size">500 ml</label>
           </div>
 
           <div class="sugarChoice">
@@ -123,10 +123,10 @@
           </div>
 
           <div class="chooseSize">
-            <input class="sizeBtn" type="radio" name="size3"></input>
-            <div class="size">250 ml</div>
-            <input class="sizeBtn" type="radio" name="size3"></input>
-            <div class="size">500 ml</div>
+            <input class="sizeBtn" type="radio" name="size3"/>
+            <label class="size">250 ml</label>
+            <input class="sizeBtn" type="radio" name="size3"/>
+            <label class="size">500 ml</label>
           </div>
 
           <div class="sugarChoice">
@@ -139,6 +139,23 @@
             <button class="infoBtn"></button>
           </div>
         </section>
+
+        <!-- script for add to cart counter -->
+        <script>
+          const countElement = document.querySelector(".cart-count");
+          let count = 0;
+          countElement.style.display = "none"; 
+      
+          document.querySelectorAll(".cartBtn").forEach(function(button) {
+              button.addEventListener("click", function() {
+                  count++;
+                  countElement.textContent = count;
+                  // If count is 0, hide the label. Otherwise, show the label.
+                  countElement.style.display = count === 0 ? "none" : "block";
+              });
+          });
+      </script>
+      
       </section>
     </div>
   </body>
